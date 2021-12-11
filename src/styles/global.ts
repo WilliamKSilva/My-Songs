@@ -2,9 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --primary: #edf6f9;
-    --text: #212529;
-    --secondary: #2d6a4f;
+    --background-strong: #121212;
+    --background-light: #222222;
+    --primary: #3ba55d;
+    --text: #ffffff;
   }
   * {
     margin: 0;
@@ -12,15 +13,15 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    @media (max-widhth: 1080px) {
+    @media (max-width: 1080px) {
       font-size: 93.75%;
     }
-    @media (max-widhth: 720px) {
+    @media (max-width: 720px) {
       font-size: 87.5%;
     }
   }
   body {
-     background: var(--primary);
+     background-color: var(--background-light);
     -webkit-font-smoothing: antialised;
   }
   body, input, textarea, button {

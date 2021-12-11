@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    max-width: 1120px;
-
-    background-color: var(--secondary);    
+    background-color: var(--background-strong);    
+    
     section {
-        display: flex;
+        max-width: 1120px;
         margin: 0 auto;
 
-        padding: 0 3rem;
+        padding: 2rem 0.3rem;
         
         h1 {
-            font-size: 15px;
-            color: var(--text);
+            font-size: 25px;
+            color: var(--primary);
         }
     }
 `;

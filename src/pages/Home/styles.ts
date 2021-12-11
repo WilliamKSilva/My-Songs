@@ -1,15 +1,37 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
-    width: 100%;
-    height: 100%;
-    padding: 0.2rem 0.5rem;
+export const Container = styled.main`        
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+    div.infoContainer {
+        position: relative;                
+        padding: 2rem;
+        width: 60vh;
+        margin-bottom: 15rem;
+                
+        
+        h1 {
+            font-size: 21px;
+            font-weight: 600;
+            padding: 2rem;
+            color: var(--text);
+            text-align: center;
+        }
 
-    background-color: var(--secondary);
+        p {
+            font-size: 18px;
+            color: var(--text);
+            text-align: center;
+            
+        }
 
-    div {
-        display: flex;
-        padding: 0.2rem 0.5rem;
-
+        span {
+            color: var(--primary);
+        }
     }
+
+    
 `;
