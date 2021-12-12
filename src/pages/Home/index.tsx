@@ -3,7 +3,7 @@ import { HiMusicNote } from 'react-icons/hi'
 
 export default function Home() {
     return (
-        <Container>
+        <Container>                       
             <div className="infoContainer">
                 <h1>
                     Your Spotify metrics in the palm of your hand
