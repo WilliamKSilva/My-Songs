@@ -21,7 +21,7 @@ export function Header() {
                     </a>
                 </div>
                 <Button 
-                    title="Teste"
+                    title="Log in"
                     onClick={onLogin}
                 />
             </section>            

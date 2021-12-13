@@ -1,4 +1,7 @@
-export function useAuth() {
+import { useEffect } from 'react';
+
+export function useAuth() {        
+        
         function onLogin() {
             const client_id = "bb534c1334a64476be453f8488c7f536";
             const spotify_endpoint = "https://accounts.spotify.com/authorize"
@@ -10,10 +13,29 @@ export function useAuth() {
             ];
             const scopes_url_param = scopes.join(delimiter);
 
-            
             window.location.href = `${spotify_endpoint}?client_id=${client_id}&redirect_uri=${redirect_url}&scope=${scopes_url_param}&response_type=token&show_dialog=true`
-     
+
         }
+
+            const authParams = (hash: any) => {
+                const stringHashtag = hash.substring(1);
+                const urlParams = stringHashtag.split("&");
+                const splitedParams = urlParams.reduce((accumulater: string[], currentValue: any) => {
+                    const [key, value] = currentValue.split("=");
+                    accumulater[key] = value;
+                    return accumulater;
+                }, {});
+                    
+                return splitedParams;
+            }
+
+            useEffect(() => {
+                if(window.location.hash) {
+                    const authData = authParams(window.location.hash);
+                }
+            }, [])
+
+                            
 
         return { onLogin }
 }
