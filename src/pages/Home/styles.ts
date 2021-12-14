@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css';
 
 export const Container = styled.main`        
     min-height: 100vh;
@@ -11,6 +12,9 @@ export const Container = styled.main`
         padding: 2rem;
         width: 60vh;
         margin-bottom: 15rem;
+
+        animation: slideInDown;
+        animation-duration: 2s;
                 
         
         h1 {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css';
 
 export const Container = styled.section`
     height: 100vh;
@@ -9,6 +10,9 @@ export const Container = styled.section`
     
     position: absolute;
     left: 0;
+
+    animation: slideInLeft;
+    animation-duration: 2s;
     
     background-color: #222222;
     

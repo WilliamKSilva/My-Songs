@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DefaultButton = styled.button`
     display: flex;
-    padding: 0.3rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     background-color: var(--primary);
     
     border: 0px;
@@ -16,6 +16,6 @@ export const DefaultButton = styled.button`
     transition: 0.2s;    
 
     &:hover {
-        filter: brightness(0.7);
+        filter: brightness(0.5);
     }
 `;
