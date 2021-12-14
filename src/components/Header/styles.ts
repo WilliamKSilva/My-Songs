@@ -23,7 +23,7 @@ export const Container = styled.header`
             transition: transform .2s;
 
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.1);
             }            
         }
         

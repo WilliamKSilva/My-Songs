@@ -1,7 +1,15 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
+interface authDataProps {
+    access_token?: string;
+    token_type?: string;
+    expires_in?: string;
+}
 
 export function useAuth() {        
         
+        const [ authData, setAuthData ] = useState({} as authDataProps)                
+
         function onLogin() {
             const client_id = "bb534c1334a64476be453f8488c7f536";
             const spotify_endpoint = "https://accounts.spotify.com/authorize"
@@ -31,11 +39,11 @@ export function useAuth() {
 
             useEffect(() => {
                 if(window.location.hash) {
-                    const authData = authParams(window.location.hash);
+                    setAuthData(authParams(window.location.hash));
                 }
             }, [])
 
                             
 
-        return { onLogin }
+        return { onLogin, authData }
 }

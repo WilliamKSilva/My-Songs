@@ -4,7 +4,7 @@ import { MdOutlineLibraryMusic } from 'react-icons/md';
 import { useAuth } from "../../hooks/useAuth";
 
 export function Header() {
-    const { onLogin } = useAuth();
+    const { onLogin, authData } = useAuth();
 
     return (
         <Container>
@@ -20,10 +20,12 @@ export function Header() {
                         My Songs
                     </a>
                 </div>
-                <Button 
+                {authData.access_token === undefined ? (
+                    <Button 
                     title="Log in"
                     onClick={onLogin}
-                />
+                    /> ) : null 
+                }                    
             </section>            
         </Container>
     );

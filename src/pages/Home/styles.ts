@@ -2,20 +2,21 @@ import styled from "styled-components";
 import 'animate.css';
 
 export const Container = styled.main`        
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    div.WrapperMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
         
-    div.infoContainer {
+    section.infoContainer {
         position: relative;                
         padding: 2rem;
-        width: 60vh;
-        margin-bottom: 15rem;
-
-        animation: slideInDown;
-        animation-duration: 2s;
-                
+        width: 60vh;                                
         
         h1 {
             font-size: 21px;

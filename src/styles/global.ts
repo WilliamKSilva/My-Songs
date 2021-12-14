@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
      background-color: var(--background-light);
-    -webkit-font-smoothing: antialised;
+    -webkit-font-smoothing: antialised;   
   }
   body, input, textarea, button {
     font-family: 'Open Sans', sans-serif;
