@@ -1,14 +1,27 @@
-import { useEffect } from "react";
-import { Container } from "./styles";
+import { useState } from 'react';
+import { Container } from './styles';
+import { MdKeyboardArrowRight } from 'react-icons/md'
 
-export function AccordionUser() {
-    
-    
+export function AccordionUser() {    
+    const [isVisible, setIsVisible] = useState(false);
+
     return (
         <Container>
-            <div className="WrapperImg">
-                
-            </div>
+            <section className="accordionHeader">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" width={30}/> 
+                <MdKeyboardArrowRight 
+                    style={{
+                        color: 'var(--primary)',
+                        fontSize: 30
+                    }}
+                    onClick={() => setIsVisible(!isVisible)}
+                />                  
+            </section> 
+            {isVisible && (
+            <div className="accordionContent">
+                <p>Logout</p>
+            </div>        
+            )}   
         </Container>
     );
 }

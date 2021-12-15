@@ -2,6 +2,7 @@ import { Button } from "../Button";
 import { Container } from "./styles";
 import { MdOutlineLibraryMusic } from 'react-icons/md';
 import { useAuth } from "../../hooks/useAuth";
+import { AccordionUser } from "../AccordionUser";
 
 export function Header() {
     const { onLogin, authData } = useAuth();
@@ -24,7 +25,7 @@ export function Header() {
                     <Button 
                     title="Log in"
                     onClick={onLogin}
-                    /> ) : null 
+                    /> ) : ( <AccordionUser /> ) 
                 }                    
             </section>            
         </Container>

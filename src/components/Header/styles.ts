@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    background-color: var(--background-strong);    
+    background-color: var(--background-strong);
+    display: block;
+    position: relative;        
     
     section {
         max-width: 1120px;
@@ -13,7 +15,7 @@ export const Container = styled.header`
         justify-content: space-between; 
               
 
-        padding: 2rem 0.3rem;        
+        padding: 2.2rem 0.3rem;        
         
 
         div.WrapperLogo {
