@@ -14,7 +14,7 @@ export const Container = styled.div`
 
     div.accordionContent {
         display: flex;
-        background-color: var(--background-light);
+        background-color: var(--background-light);        
         justify-content: center;
         padding: 0.5rem 0.5rem;
         p {

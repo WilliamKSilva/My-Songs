@@ -20,12 +20,37 @@ export const Container = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 70vh;
+        border-bottom: 2px solid var(--border);
+        
 
         h1 {
-            color: var(--text);
+            color: var(--text);            
             font-weight: 800;
-            font-size: 20px;
+            font-size: 22px;
             margin-top: 4rem;
         }
+    }
+`;
+
+export const SidebarFooter = styled.footer`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0.5rem;
+
+
+    strong {
+        font-size: 16px;
+        color: var(--text);
+    }
+
+    a {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--primary);
     }
 `;
