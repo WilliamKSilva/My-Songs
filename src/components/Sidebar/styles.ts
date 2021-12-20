@@ -17,12 +17,14 @@ export const Container = styled.section`
     
     div.content {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         h1 {
             color: var(--text);
-            font-size: 16px;
+            font-weight: 800;
+            font-size: 20px;
             margin-top: 4rem;
         }
     }
