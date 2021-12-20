@@ -7,7 +7,7 @@ export function SidebarList() {
     return (
         isLoading === false ? (
             <Container>        
-                {playlistTracks.tracks.items.map(item => (
+                {playlistTracks.tracks.items.slice(0, 5).map(item => (
                     <li key={item.track.id}>
                         <strong>{item.track.name}</strong>                        
                     </li>
