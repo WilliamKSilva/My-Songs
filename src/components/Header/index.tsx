@@ -5,7 +5,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { AccordionUser } from "../AccordionUser";
 
 export function Header() {
-    const { onLogin, authData } = useAuth();
+    const { onLogin } = useAuth();
 
     return (
         <Container>
@@ -21,12 +21,12 @@ export function Header() {
                         My Songs
                     </a>
                 </div>
-                {authData.access_token === undefined ? (
+              
                     <Button 
                     title="Log in"
                     onClick={onLogin}
-                    /> ) : ( <AccordionUser /> ) 
-                }                    
+                    /> 
+                                    
             </section>            
         </Container>
     );

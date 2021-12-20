@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-    height: 20vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
+    
     justify-content: center;
     align-items: center;
 
@@ -11,7 +14,7 @@ export const Container = styled.footer`
     section {
         display: flex;
         justify-content: center;
-        padding: 25px 60px;
+        padding: 25px 50px;
         border-top: 2px solid var(--background-light);
 
         a {

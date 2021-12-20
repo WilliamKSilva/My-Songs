@@ -2,13 +2,13 @@ import styled from "styled-components";
 import 'animate.css';
 
 export const Container = styled.section`
-    height: 75vh;
+    position: fixed;
+    height: 100%;
 
     width: 15%;
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-        
     left: 0;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);            
 
     animation: slideInLeft;
     animation-duration: 2s;

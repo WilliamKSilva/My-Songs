@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container } from './styles';
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import "animate.css";
 
 export function AccordionUser() {    
     const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ export function AccordionUser() {
                 <MdKeyboardArrowRight 
                     style={{
                         color: 'var(--primary)',
-                        fontSize: 30
+                        fontSize: 30,                        
                     }}
                     onClick={() => setIsVisible(!isVisible)}
                 />                  

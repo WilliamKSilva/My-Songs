@@ -6,6 +6,8 @@ export const Container = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInUp;
+    animation-duration: 1s;
 
     div.WrapperMain {
         display: flex;
@@ -16,7 +18,8 @@ export const Container = styled.main`
     section.infoContainer {
         position: relative;                
         padding: 2rem;
-        width: 60vh;                                
+        width: 60vh;  
+                
         
         h1 {
             font-size: 21px;

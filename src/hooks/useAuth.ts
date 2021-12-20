@@ -1,14 +1,20 @@
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 interface authDataProps {
-    access_token?: string;
-    token_type?: string;
-    expires_in?: string;
+    access_token: string;
+    expires_in: string;
+    token_type: string;
 }
 
-export function useAuth() {        
+export function useAuth() {                      
+
+        /*
+            const [authData, setAuthData] = useState({} as authDataProps)
         
-        const [ authData, setAuthData ] = useState({} as authDataProps)                
+            Need to be debugged, right now, when I try to setAuthData with route params like
+            access_token, the value returns only undefined
+        */
 
         function onLogin() {
             const client_id = "bb534c1334a64476be453f8488c7f536";
@@ -17,7 +23,10 @@ export function useAuth() {
             const delimiter = "%20";
             const scopes = [
                 "user-read-email",
-                "user-top-read"
+                "user-top-read",
+                "playlist-read-collaborative",
+                "playlist-read-private",
+                "user-top-read",
             ];
             const scopes_url_param = scopes.join(delimiter);
 
@@ -39,11 +48,10 @@ export function useAuth() {
 
             useEffect(() => {
                 if(window.location.hash) {
-                    setAuthData(authParams(window.location.hash));
+                    const { access_token } = (authParams(window.location.hash));      
+                    localStorage.setItem('access_token', access_token)            
                 }
-            }, [])
+            }, [])                                                                            
 
-                            
-
-        return { onLogin, authData }
+        return { onLogin }
 }
