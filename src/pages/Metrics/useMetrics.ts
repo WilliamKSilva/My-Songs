@@ -11,7 +11,7 @@ export function useMetrics() {
     
     const [currentParams, setCurrentParams] = useState('artists');
     const [ isLoading, setIsLoading ] = useState(true);        
-    const [teste, setTeste] = useState(true)
+    const [fetchingData, setFetchingData] = useState(true)
 
     useEffect(() => {
         (async function onMetricsLoad() {
@@ -30,11 +30,10 @@ export function useMetrics() {
             }
         })()
     }, [isLoading]) 
-    
-    
+       
 
     useEffect(() => {
-        (async function onOptionsChoose() {
+        (async () => {
             try {
                 const response = await axios.get(`https://api.spotify.com/v1/me/top/${currentParams}`,
                 {                             
@@ -45,13 +44,13 @@ export function useMetrics() {
                 )
                                 
                 setMetricsData(response.data)
-                console.log(response.data)                
-                setTeste(false)
+                console.log(response.data)                                
+                setFetchingData(false)
             } catch(err) {
                 console.log(err)
             }
         })()
     }, [currentParams])
 
-    return { playlistTracks, isLoading, metricsData, currentParams, setCurrentParams, teste }
+    return { playlistTracks, isLoading, metricsData, currentParams, setCurrentParams, fetchingData }
 }

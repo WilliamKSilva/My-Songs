@@ -3,10 +3,9 @@ import { Container } from "./styles";
 
 
 export function ContainerList() {
-    const { teste, metricsData } = useMetrics();
-    
-    return (
-        teste === false ? (
+    const { fetchingData, metricsData } = useMetrics();    
+    return (        
+        fetchingData === false ? (
             <Container>
                 {metricsData.items.slice(0, 6).map(items => (
                     <li key={items.id}>

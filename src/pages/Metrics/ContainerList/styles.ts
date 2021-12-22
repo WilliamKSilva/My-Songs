@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import 'animate.css';
 
 export const Container = styled.ul`
     background-color: #222222;    
-    list-style-type: disc;    
+    list-style-type: disc;
+    
+    animation: fadeIn;
+    animation-duration: 2s;
 
     li {
         display: flex;

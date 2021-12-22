@@ -8,7 +8,7 @@ export function Sidebar() {
     return (
         <Container>
             <div className="content">
-                <h1>Top musics from the moment:</h1>
+                <h1>Top songs from the moment:</h1>
                 <SidebarList />                                    
             </div>
             <SidebarFooter>
