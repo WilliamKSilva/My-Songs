@@ -1,10 +1,8 @@
-import { useMetrics } from "../../pages/Metrics/useMetrics";
 import { SidebarList } from "./SidebarList";
 import { Container, SidebarFooter } from "./styles";
 
 export function Sidebar() {
        
-
     return (
         <Container>
             <div className="content">

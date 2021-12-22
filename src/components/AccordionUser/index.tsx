@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Container } from './styles';
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import "animate.css";
+import { useAuth } from '../../hooks/useAuth';
 
-export function AccordionUser() {    
+export function AccordionUser({setIsLogged}: any) {    
     const [isVisible, setIsVisible] = useState(false);
 
     return (
@@ -20,7 +21,7 @@ export function AccordionUser() {
             </section> 
             {isVisible && (
             <div className="accordionContent">
-                <p>Logout</p>
+                <a onClick={() => setIsLogged(false)} href="/">Logout</a>
             </div>        
             )}   
         </Container>

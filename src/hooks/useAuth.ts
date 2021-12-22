@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 interface authDataProps {
@@ -8,6 +7,7 @@ interface authDataProps {
 }
 
 export function useAuth() {                      
+        const [isLogged, setIsLogged] = useState(false);
 
         /*
             const [authData, setAuthData] = useState({} as authDataProps)
@@ -48,10 +48,11 @@ export function useAuth() {
 
             useEffect(() => {
                 if(window.location.hash) {
-                    const { access_token } = (authParams(window.location.hash));      
+                    const { access_token } = (authParams(window.location.hash));
+                    setIsLogged(true);      
                     localStorage.setItem('access_token', access_token)            
                 }
             }, [])                                                                            
 
-        return { onLogin }
+        return { onLogin, isLogged, setIsLogged }
 }

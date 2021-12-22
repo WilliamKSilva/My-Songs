@@ -10,7 +10,7 @@ export function useMetrics() {
     const [metricsData, setMetricsData] = useState({} as IUserMetrics)
     
     const [currentParams, setCurrentParams] = useState('artists');
-    const [ isLoading, setIsLoading ] = useState(true);        
+    const [ isLoading, setIsLoading ] = useState(true);     
     const [fetchingData, setFetchingData] = useState(true)
 
     useEffect(() => {
@@ -29,28 +29,33 @@ export function useMetrics() {
                 console.log(err)
             }
         })()
-    }, [isLoading]) 
-       
+    }, [isLoading])     
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const response = await axios.get(`https://api.spotify.com/v1/me/top/${currentParams}`,
-                {                             
-                    headers: {                                                            
-                        Authorization: 'Bearer ' + access_token
-                    },
-                }     
-                )
-                                
-                setMetricsData(response.data)
-                console.log(response.data)                                
-                setFetchingData(false)
-            } catch(err) {
-                console.log(err)
-            }
-        })()
+    const fetchData = async () => {                                    
+        const response = await axios.get(`https://api.spotify.com/v1/me/top/${currentParams}`,
+        
+        {                             
+            headers: {                                                            
+                Authorization: 'Bearer ' + access_token
+            },
+        }     
+        )
+                        
+        setMetricsData(response.data)
+        console.log(response.data)                                                       
+        setFetchingData(false)           
+    }
+
+    useEffect(() => {        
+        fetchData()
     }, [currentParams])
 
-    return { playlistTracks, isLoading, metricsData, currentParams, setCurrentParams, fetchingData }
+    return { 
+        playlistTracks, 
+        isLoading, 
+        metricsData, 
+        currentParams, 
+        setCurrentParams, 
+        fetchingData,       
+    }
 }

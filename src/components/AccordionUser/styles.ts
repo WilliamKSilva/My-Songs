@@ -17,7 +17,8 @@ export const Container = styled.div`
         background-color: var(--background-light);        
         justify-content: center;
         padding: 0.5rem 0.5rem;
-        p {
+        
+        a {
             font-size: 12px;
             color: var(--text);
             font-weight: 600;

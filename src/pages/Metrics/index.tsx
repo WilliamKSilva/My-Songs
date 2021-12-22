@@ -1,14 +1,11 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Accordion } from "../../components/Accordion";
-import { Button } from "../../components/Button";
 import { Sidebar } from "../../components/Sidebar";
 import { ContainerList } from "./ContainerList";
 import { Container, MetricContainer } from "./styles";
 import { useMetrics } from "./useMetrics";
 
 export default function Metrics() {
-    const { currentParams } = useMetrics();    
+    const { metricsData, fetchingData, currentParams, setCurrentParams } = useMetrics();    
 
     return (       
             <Container>
@@ -16,12 +13,12 @@ export default function Metrics() {
                 <MetricContainer>
                     <div className="content">
                         <header>
-                            <Accordion />
+                            <Accordion setCurrentParams={setCurrentParams}/>
                             <div className="WrapperTitle">
                                 <h1>Your favorite {currentParams}!</h1>
                             </div>
                         </header>
-                        <ContainerList />                                                    
+                        <ContainerList fetchingData={fetchingData} metricsData={metricsData}/>                                                    
                     </div>
                 </MetricContainer>                
             </Container>

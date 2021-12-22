@@ -1,17 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Container } from './styles';
 import { MdKeyboardArrowRight } from 'react-icons/md'
-import { useMetrics } from '../../pages/Metrics/useMetrics';
 
-export function Accordion() {        
-    const { currentParams, setCurrentParams } = useMetrics();
+export function Accordion({ setCurrentParams }: any) {            
     
-    const [isVisible, setIsVisible] = useState(false);
-    
-    function teste() {
-        setCurrentParams('tracks')
-        console.log(currentParams)
-    }
+    const [isVisible, setIsVisible] = useState(false);      
 
     return (
         <Container>
@@ -30,7 +23,7 @@ export function Accordion() {
             {isVisible && (
                 <div className="accordionContent">
                     <p onClick={() => setCurrentParams('artists')}>Top artists</p>
-                    <p onClick={teste}>Top songs</p>
+                    <p onClick={() => setCurrentParams('tracks')}>Top songs</p>
                 </div>        
             )}   
         </Container>

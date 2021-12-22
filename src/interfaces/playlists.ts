@@ -15,6 +15,11 @@ interface IUserMetrics {
         name: string;
         images?: [{
             url: string;
+        }]
+        album?: [{
+            images: [{
+                url: string;
+            }]
         }]        
     }]
 }
