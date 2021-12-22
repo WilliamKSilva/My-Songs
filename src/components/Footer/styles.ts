@@ -14,12 +14,13 @@ export const Container = styled.footer`
     section {
         display: flex;
         justify-content: center;
+        margin-top: 1rem;
         padding: 25px 50px;
         border-top: 2px solid var(--background-light);
 
         a {
             font-size: 18px;            
-            color: var(--text);
+            color: var(--text);            
             text-decoration: none;
             transition: 0.2s;
 
