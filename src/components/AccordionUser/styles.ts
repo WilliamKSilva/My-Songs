@@ -7,8 +7,8 @@ export const Container = styled.div`
     section.accordionHeader {
         display: flex;
         flex-direction: row;
-        padding: 0.4rem 0.2rem;
-        gap: 0.rem;
+        padding: 0.3rem 0.2rem;
+        gap: 0.2rem;
         align-items: center;        
     }
 
@@ -16,10 +16,11 @@ export const Container = styled.div`
         display: flex;
         background-color: var(--background-light);        
         justify-content: center;
+        border: 2px solid var(--border);
         padding: 0.5rem 0.5rem;
         
         a {
-            font-size: 12px;
+            font-size: 15px;
             color: var(--text);
             font-weight: 600;
             cursor: pointer;

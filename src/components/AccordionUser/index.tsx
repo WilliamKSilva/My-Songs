@@ -1,16 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from './styles';
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import "animate.css";
-import { useAuth } from '../../hooks/useAuth';
+import axios from 'axios';
+import { IUser } from '../../interfaces/playlists';
 
 export function AccordionUser({setIsLogged}: any) {    
     const [isVisible, setIsVisible] = useState(false);
+    const [ userData, setUserData ] = useState({} as IUser)
+
+    const access_token = localStorage.getItem('access_token')
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await axios.get('https://api.spotify.com/v1/me', 
+                {                             
+                    headers: {                                                            
+                        Authorization: 'Bearer ' + access_token
+                    },
+                }         
+                )
+                setUserData(response.data)
+            } catch(err) {
+                console.log(err)
+            }
+        })()
+    })
 
     return (
         <Container>
             <section className="accordionHeader">
-                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" width={30}/> 
+                {userData.images.slice(0, 1).map(images => (
+                    <img src={images.url} alt="" width={50} style={{borderRadius: 35}}/>
+                ))} 
                 <MdKeyboardArrowRight 
                     style={{
                         color: 'var(--primary)',

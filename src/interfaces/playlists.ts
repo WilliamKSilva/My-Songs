@@ -24,4 +24,10 @@ interface IUserMetrics {
     }]
 }
 
-export type { IGlobalPlaylist, IUserMetrics };
+interface IUser {
+    images: [{
+        url: string;
+    }]
+}
+
+export type { IGlobalPlaylist, IUserMetrics, IUser };
