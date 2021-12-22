@@ -1,12 +1,22 @@
-interface ITracksItems {
-    track: {
-        id: string;
-        name: string;
+interface IGlobalPlaylist {
+    tracks: {
+        items: [{
+            track: {
+                 id: string;
+                 name: string;
+            }
+        }]
     }
 }
 
-interface ITracks {
-    tracks: ITracksItems[]
+interface IUserMetrics {
+    items: [{
+        id: string;
+        name: string;
+        images?: [{
+            url: string;
+        }]        
+    }]
 }
 
-export type { ITracks };
+export type { IGlobalPlaylist, IUserMetrics };

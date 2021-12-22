@@ -39,7 +39,8 @@ export const Container = styled.div`
         padding: 0.5rem 0.5rem;
 
         background-color: var(--background-light);
-        border: 2px solid var(--border);        
+        border: 2px solid var(--border);
+                
         p {
             font-size: 15px;
             margin-top: 1rem;
@@ -47,6 +48,11 @@ export const Container = styled.div`
             color: var(--text);                        
             font-weight: 600;
             cursor: pointer;
+            transition: 0.2s;
+        }
+
+        p:hover {
+            filter: brightness(0.5);
         }
     }
 `;

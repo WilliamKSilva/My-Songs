@@ -1,22 +1,17 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { ITracks } from "../../interfaces/playlists"
+import { IGlobalPlaylist, IUserMetrics } from "../../interfaces/playlists"
 
-interface Response {
-   tracks: {
-       items: [{
-           track: {
-                id: string;
-                name: string;
-           }
-       }]
-   }
-}
 
 export function useMetrics() {
     const access_token = localStorage.getItem('access_token')
-    const [ isLoading, setIsLoading ] = useState(true);
-    const [ playlistTracks, setPlaylistTracks ] = useState({} as Response);
+        
+    const [ playlistTracks, setPlaylistTracks ] = useState({} as IGlobalPlaylist);
+    const [metricsData, setMetricsData] = useState({} as IUserMetrics)
+    
+    const [currentParams, setCurrentParams] = useState('artists');
+    const [ isLoading, setIsLoading ] = useState(true);        
+    const [teste, setTeste] = useState(true)
 
     useEffect(() => {
         (async function onMetricsLoad() {
@@ -34,7 +29,29 @@ export function useMetrics() {
                 console.log(err)
             }
         })()
-    }, [isLoading])
+    }, [isLoading]) 
+    
+    
 
-    return { playlistTracks, isLoading }
+    useEffect(() => {
+        (async function onOptionsChoose() {
+            try {
+                const response = await axios.get(`https://api.spotify.com/v1/me/top/${currentParams}`,
+                {                             
+                    headers: {                                                            
+                        Authorization: 'Bearer ' + access_token
+                    },
+                }     
+                )
+                                
+                setMetricsData(response.data)
+                console.log(response.data)                
+                setTeste(false)
+            } catch(err) {
+                console.log(err)
+            }
+        })()
+    }, [currentParams])
+
+    return { playlistTracks, isLoading, metricsData, currentParams, setCurrentParams, teste }
 }
