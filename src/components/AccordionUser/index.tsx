@@ -6,8 +6,9 @@ import axios from 'axios';
 import { IUser } from '../../interfaces/playlists';
 
 export function AccordionUser({setIsLogged}: any) {    
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);    
     const [ userData, setUserData ] = useState({} as IUser)
+    const [isFetchingData, setIsFetchingData] = useState(true);
 
     const access_token = localStorage.getItem('access_token')
 
@@ -22,6 +23,7 @@ export function AccordionUser({setIsLogged}: any) {
                 }         
                 )
                 setUserData(response.data)
+                setIsFetchingData(false);
             } catch(err) {
                 console.log(err)
             }
@@ -31,9 +33,12 @@ export function AccordionUser({setIsLogged}: any) {
     return (
         <Container>
             <section className="accordionHeader">
-                {userData.images.slice(0, 1).map(images => (
-                    <img src={images.url} alt="" width={50} style={{borderRadius: 35}}/>
-                ))} 
+                {isFetchingData === false ? ( 
+                    userData.images.slice(0, 1).map(images => (
+                        <img src={images.url} alt="" width={50} style={{borderRadius: 35}}/>
+                    ))
+                    ) : null 
+                }                    
                 <MdKeyboardArrowRight 
                     style={{
                         color: 'var(--primary)',

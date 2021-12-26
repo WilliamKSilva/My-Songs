@@ -13,11 +13,12 @@ export const Container = styled.ul`
 
     li::marker {
         font-size: 20px;
+        margin-left: 10px;
         color: var(--primary);
     }
 
     strong {
-        font-size: 17px;
+        font-size: 15px;        
         color: var(--text);
     }
 `;

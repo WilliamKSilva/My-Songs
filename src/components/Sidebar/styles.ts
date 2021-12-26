@@ -25,7 +25,7 @@ export const Container = styled.section`
         
 
         h1 {
-            color: var(--text);            
+            color: var(--primary);            
             font-weight: 800;
             font-size: 22px;
             margin-top: 4rem;
