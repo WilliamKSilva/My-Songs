@@ -16,7 +16,7 @@ export function useMetrics() {
     useEffect(() => {
         (async function onMetricsLoad() {
             try {                                        
-                const response = await axios.get('https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF?si=4ea4d7c421174240',                        
+                const response = await axios.get('https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF?si=b449f615247e4a59',                        
                 {                             
                     headers: {                                                            
                         Authorization: 'Bearer ' + access_token

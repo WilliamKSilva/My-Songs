@@ -3,11 +3,13 @@ import { Sidebar } from "../../components/Sidebar";
 import { ContainerList } from "./ContainerList";
 import { Container, MetricContainer } from "./styles";
 import { useMetrics } from "./useMetrics";
+import { Loading } from "../../components/Loading";
 
 export default function Metrics() {
-    const { metricsData, fetchingData, currentParams, setCurrentParams } = useMetrics();    
+    const { metricsData, fetchingData, currentParams, setCurrentParams, isLoading } = useMetrics();    
 
-    return (       
+    return isLoading === true ? ( <Loading /> ) :       
+            (
             <Container>
                 <Sidebar />
                 <MetricContainer>
@@ -21,7 +23,6 @@ export default function Metrics() {
                         <ContainerList fetchingData={fetchingData} metricsData={metricsData}/>                                                    
                     </div>
                 </MetricContainer>                
-            </Container>
-    
+            </Container>                
     )
 }

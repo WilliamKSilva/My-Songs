@@ -8,7 +8,7 @@ export const Container = styled.ul`
     
     li {
         margin-top: 5rem;
-        margin-left: 2rem;
+        margin-left: 1.65rem;
         width: 100%;
     }
 
@@ -20,6 +20,7 @@ export const Container = styled.ul`
     strong {
         font-size: 1rem; 
         word-wrap: break-word;
+        white-space: -moz-pre-wrap; /* Mozilla */
         color: var(--text);
     }
 `;

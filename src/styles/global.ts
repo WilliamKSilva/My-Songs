@@ -14,9 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  html {
-         
-
+  html {         
     @media(max-width: 1080px){
       html{
         font-size: 93.75%;
@@ -48,5 +46,21 @@ export const GlobalStyle = createGlobalStyle`
   [disabled] {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  ::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: var(--text);
+      -webkit-border-radius: 1rem;
+      -webkit-box-shadow: 0px 1px 2px var(--border);
+  }
+
+  ::-webkit-scrollbar-corner {
+      background: var(---background-strong);
   }
 `;

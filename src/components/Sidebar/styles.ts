@@ -20,7 +20,7 @@ export const Container = styled.section`
         flex-direction: column;
         width: 100%;
         align-items: center;
-        height: 70vh;
+        height: 70vh;        
         border-bottom: 2px solid var(--border);
         
 

@@ -12,7 +12,7 @@ export default function Home() {
                 <section className="infoContainer">
                     <h1>
                         Your Spotify metrics in the palm of your hand
-                    </h1>
+                    </h1>                    
                     <p>
                         By Starting session with your spotify account <br />
                         you will have access to some options to choose <br />
