@@ -41,8 +41,7 @@ export const Container = styled.div`
         background-color: var(--background-light);
         border: 2px solid var(--border);
                 
-        p {
-            font-size: 15px;
+        p {            
             margin-top: 1rem;
             border-bottom: 2px solid var(--border);
             color: var(--text);                        

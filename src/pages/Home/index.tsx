@@ -6,7 +6,7 @@ export default function Home() {
         <Container>
             <div className="WrapperMain">
                 <BsClipboardData style={{
-                    fontSize: 150,
+                    fontSize: 250,
                     color: 'var(--primary)'                
                 }}/>                       
                 <section className="infoContainer">
@@ -16,8 +16,8 @@ export default function Home() {
                     <p>
                         By Starting session with your spotify account <br />
                         you will have access to some options to choose <br />
-                        like your <span>"Favorite artists"</span>, <span>"Top songs"</span> and <br />
-                        <span>"Most listened albuns"</span>.<br /> <br />
+                        like your <span>"Favorite artists"</span> and your <br />
+                        <span>"Top Songs"</span>.<br /> <br />
                         Enjoy it! 😄
                     </p>
                 </section>  

@@ -22,7 +22,7 @@ export const Container = styled.header`
             display: flex;
             flex-direction: row;
             align-items: center;
-            transition: transform .2s;
+            transition: transform 0.2s;
 
             &:hover {
                 transform: scale(1.1);

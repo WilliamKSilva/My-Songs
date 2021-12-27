@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Container = styled.main`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 `;
 
 export const MetricContainer = styled.section`
     display: flex;
+    margin: 0 auto;
     margin-top: 12rem;
 
     div.content {
@@ -25,11 +26,11 @@ export const MetricContainer = styled.section`
 
         div.WrapperTitle {            
             position: absolute;
-            left: 45.5%;            
+            left: 56%;            
         }
 
         h1 {
-            font-size: 25px;
+            font-size: 1rem;
             color: var(--primary);
         }
     }

@@ -17,20 +17,21 @@ export const Container = styled.main`
         
     section.infoContainer {
         position: relative;                
-        padding: 2rem;
+        padding: 5rem;
         width: 60vh;  
                 
         
         h1 {
-            font-size: 21px;
+            font-size: var(--xxlarge);
             font-weight: 600;
             padding: 2rem;
-            color: var(--text);
+            color: var(--primary);
             text-align: center;
         }
 
         p {
-            font-size: 18px;
+            font-size: 25px;
+            margin-top: 2.5rem;
             color: var(--text);
             text-align: center;
             

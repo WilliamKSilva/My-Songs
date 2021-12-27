@@ -17,7 +17,7 @@ export const Container = styled.ul`
         width: 50%;
         
         margin-left: 17rem;
-        margin-top: 3.5rem;        
+        margin-top: 2rem;        
 
         p {
             font-size: 15px;

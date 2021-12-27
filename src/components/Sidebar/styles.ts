@@ -2,11 +2,11 @@ import styled from "styled-components";
 import 'animate.css';
 
 export const Container = styled.section`
-    position: fixed;
-    height: 100%;
+    position: sticky;
+    height: 100vh;
+    
 
-    width: 15%;
-    left: 0;
+    width: 17%;
     border-left: 1px solid var(--border);
     border-right: 1px solid var(--border);            
 
@@ -18,7 +18,7 @@ export const Container = styled.section`
     div.content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        width: 100%;
         align-items: center;
         height: 70vh;
         border-bottom: 2px solid var(--border);
@@ -27,7 +27,7 @@ export const Container = styled.section`
         h1 {
             color: var(--primary);            
             font-weight: 800;
-            font-size: 22px;
+            font-size: 1rem;
             margin-top: 4rem;
         }
     }
