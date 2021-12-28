@@ -7,31 +7,33 @@ export const GlobalStyle = createGlobalStyle`
     --border: #2d2d2d;
     --primary: #3ba55d;
     --text: #D3D3D3;
+
+    --desktop: 1200px;
+    --laptop: 992px;
+    --tablet: 768px;
+    --phone: 480px;
     
   }
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  html {         
-    @media(max-width: 1080px){
-      html{
-        font-size: 93.75%;
-      }
+    font-size: 1.6rem;
+
+    @media(max-width: 1080px){       
+      font-size: 93.75%;      
     }
 
-    @media(max-width: 720px){
-      html{
-        font-size: 87.5%;
-      }
+    @media(max-width: 480px){       
+      font-size: 70%;      
     }
-
   }
+
   body {
     font-size: 1.6rem;
     background-color: var(--background-light);
-    -webkit-font-smoothing: antialised;   
+    -webkit-font-smoothing: antialised;     
+    
   }
   body, input, textarea, button {
     font-family: 'Open Sans', sans-serif;

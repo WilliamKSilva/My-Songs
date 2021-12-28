@@ -16,7 +16,7 @@ export const Container = styled.footer`
         justify-content: center;
         margin-top: 1rem;
         padding: 25px 50px;
-        border-top: 2px solid var(--background-light);
+        border-top: 2px solid var(--background-light);        
 
         a {
             font-size: 18px;            

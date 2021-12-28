@@ -22,7 +22,6 @@ export const Container = styled.main`
                 
         
         h1 {
-            font-size: var(--xxlarge);
             font-weight: 600;
             padding: 2rem;
             color: var(--primary);
@@ -30,7 +29,7 @@ export const Container = styled.main`
         }
 
         p {
-            font-size: 25px;
+            font-size: 1.8rem;
             margin-top: 2.5rem;
             color: var(--text);
             text-align: center;

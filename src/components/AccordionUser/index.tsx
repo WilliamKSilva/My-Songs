@@ -35,14 +35,14 @@ export function AccordionUser({setIsLogged}: any) {
             <section className="accordionHeader">
                 {isFetchingData === false ? ( 
                     userData.images.slice(0, 1).map(images => (
-                        <img src={images.url} alt="" width={50} style={{borderRadius: 35}}/>
+                        <img src={images.url} alt="" width={65} style={{borderRadius: 35}}/>
                     ))
                     ) : null 
                 }                    
                 <MdKeyboardArrowRight 
                     style={{
                         color: 'var(--primary)',
-                        fontSize: 30,                        
+                        fontSize: 50,                        
                     }}
                     onClick={() => setIsVisible(!isVisible)}
                 />                  

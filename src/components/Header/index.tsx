@@ -14,7 +14,7 @@ export function Header() {
                     <MdOutlineLibraryMusic 
                         style={{
                             color: '#3ba55d',                            
-                            fontSize: 30                                                                                    
+                            fontSize: 50                                                                                    
                         }}                        
                     />
                     <a href="/">

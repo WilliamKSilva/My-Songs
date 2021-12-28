@@ -7,7 +7,7 @@ export const Container = styled.ul`
     align-items: center;
     
     li {
-        margin-top: 5rem;
+        margin-top: 4rem;
         margin-left: 1.65rem;
         width: 100%;
     }

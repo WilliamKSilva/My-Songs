@@ -23,7 +23,7 @@ export const Container = styled.div`
         }  
         
         h1 {
-            font-size: 19px;            
+            font-size: 1rem;            
             color: var(--text);
         }                
     }

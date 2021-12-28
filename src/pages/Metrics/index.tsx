@@ -22,7 +22,7 @@ export default function Metrics() {
                         </header>
                         <ContainerList fetchingData={fetchingData} metricsData={metricsData}/>                                                    
                     </div>
-                </MetricContainer>                
+                </MetricContainer>                              
             </Container>                
     )
 }

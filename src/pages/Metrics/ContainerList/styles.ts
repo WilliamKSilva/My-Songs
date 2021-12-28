@@ -2,7 +2,12 @@ import styled from "styled-components";
 import 'animate.css';
 
 export const Container = styled.ul`
-    background-color: #222222;    
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     list-style-type: disc;
     
     animation: fadeIn;
@@ -12,15 +17,15 @@ export const Container = styled.ul`
         display: flex;
         gap: 2rem;
         align-items: center;
+        padding: 0 5rem;
         
         border-bottom: 2px solid var(--border);
-        width: 50%;
+        width: 100%;        
         
-        margin-left: 17rem;
-        margin-top: 2rem;        
+        margin-top: 2rem;                
 
         p {
-            font-size: 15px;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--text);
         }
