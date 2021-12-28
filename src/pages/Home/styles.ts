@@ -29,7 +29,7 @@ export const Container = styled.main`
         }
 
         p {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-top: 2.5rem;
             color: var(--text);
             text-align: center;

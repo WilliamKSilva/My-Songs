@@ -9,7 +9,7 @@ export const DefaultButton = styled.button`
     border-radius: 8px; 
     
     color: var(--text);
-    font-size: 1.5rem;
+    font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
 
