@@ -2,12 +2,13 @@ import { Container } from './styles';
 import { BsClipboardData } from 'react-icons/bs'
 
 export default function Home() {
+    
     return (
         <Container>
             <div className="WrapperMain">
                 <BsClipboardData style={{
                     fontSize: 250,
-                    color: 'var(--primary)'                
+                    color: 'var(--primary)'                                                        
                 }}/>                       
                 <section className="infoContainer">
                     <h1>

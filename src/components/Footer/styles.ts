@@ -19,7 +19,7 @@ export const Container = styled.footer`
         border-top: 2px solid var(--background-light);        
 
         a {
-            font-size: 18px;            
+            font-size: 1rem;            
             color: var(--text);            
             text-decoration: none;
             transition: 0.2s;

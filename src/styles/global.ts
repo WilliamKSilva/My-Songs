@@ -20,12 +20,14 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 1.6rem;
 
-    @media(max-width: 1080px){       
-      font-size: 93.75%;      
-    }
+    
 
     @media(max-width: 480px){       
-      font-size: 70%;      
+      font-size: 50%;      
+    }
+
+    @media(max-width: 998px){       
+      font-size: 95%;
     }
   }
 

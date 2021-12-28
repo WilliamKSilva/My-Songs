@@ -6,15 +6,19 @@ export const Container = styled.header`
     display: block;
     
     section {
-        max-width: 1120px;        
-        margin: 0 auto;        
+        max-width: 1500px;        
+        margin: 0 auto;                 
         
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;                              
 
-        padding: 2.2rem 0.1rem;        
+        padding: 2.2rem 0rem;   
+        
+        @media(min-width: 998px) and (max-width: 998px){        
+            padding: 2.2rem 3rem;
+        }
         
 
         div.WrapperLogo {

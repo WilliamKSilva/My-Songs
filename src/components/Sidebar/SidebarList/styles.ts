@@ -18,7 +18,7 @@ export const Container = styled.ul`
     }
 
     strong {
-        font-size: 1rem; 
+        font-size: 0.90rem; 
         word-wrap: break-word;
         white-space: -moz-pre-wrap; /* Mozilla */
         color: var(--text);

@@ -18,7 +18,10 @@ export const MetricContainer = styled.section`
     @media (max-width: 480px){
         width: 50vh;
         margin-top: 5rem;
-        margin-right: 2rem;
+    }
+
+    @media(max-width: 998px){       
+      width: 50vh;
     }
 
     div.content {
@@ -28,8 +31,12 @@ export const MetricContainer = styled.section`
         background-color: #222222;
         border: 2px solid var(--border); 
         
-        @media (max-width: 480px){
+        @media (max-width: 480px){            
+            height: 78vh;
             width: 50vh;
+        }
+
+        @media(max-width: 998px){       
             height: 78vh;
         }
     }
@@ -41,12 +48,13 @@ export const MetricContainer = styled.section`
 
         div.WrapperTitle {            
             position: absolute;
-            left: 54%;
+            left: 50%;
         }
 
         h1 {
-            font-size: 1.2rem;
-            color: var(--primary);
+            font-size: 1rem;
+            word-wrap: break-word;
+            color: var(--primary);            
         }
     }
 `;

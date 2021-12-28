@@ -8,6 +8,10 @@ export const Container = styled.section`
     @media (max-width: 480px){
         display: none;
     }
+
+    @media(max-width: 998px){       
+        width: 30%;
+    }
     
     width: 17%;
     border-left: 1px solid var(--border);
