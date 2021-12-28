@@ -16,13 +16,14 @@ export function useMetrics() {
     useEffect(() => {
         (async function onMetricsLoad() {
             try {                                        
-                const response = await axios.get('https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF?si=b449f615247e4a59',                        
+                const response = await axios.get('https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF?si=1480b4a150364575',                        
                 {                             
                     headers: {                                                            
                         Authorization: 'Bearer ' + access_token
                     },
                 }                    
                 )                                
+                console.log(response.data);
                 setPlaylistTracks(response.data)                                
                 setIsLoading(false);                                        
             } catch(err) {
