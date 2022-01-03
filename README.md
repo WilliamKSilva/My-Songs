@@ -4,7 +4,7 @@
 
 In this React Application the user can log on using spotify auth and check his related stats, like favorite artist, favorite songs etc.
 
-![image](https://user-images.githubusercontent.com/75429175/147896386-4c295913-2547-4eff-aed9-b6860fa12aa4.png)
+![image](https://user-images.githubusercontent.com/75429175/147896427-fd4d710c-d636-4ee1-a491-3289f89ab0ef.png)
 
 ## Features
 In the actual moment:
