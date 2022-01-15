@@ -13,7 +13,7 @@ export const Container = styled.main`
 export const MetricContainer = styled.section`
     display: flex;
     margin: 0 auto;    
-    margin-top: 12rem;
+    margin-top: 8rem;
 
     @media (max-width: 480px){
         width: 50vh;
@@ -26,7 +26,7 @@ export const MetricContainer = styled.section`
 
     div.content {
         width: 100vh;
-        height: 70%;        
+        height: 64vh;        
         border-radius: 5.5px;
         background-color: #222222;
         border: 2px solid var(--border); 
@@ -48,7 +48,7 @@ export const MetricContainer = styled.section`
 
         div.WrapperTitle {            
             position: absolute;
-            left: 50%;
+            left: 55%;
         }
 
         h1 {

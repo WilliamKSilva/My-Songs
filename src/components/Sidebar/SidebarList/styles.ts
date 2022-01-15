@@ -7,7 +7,7 @@ export const Container = styled.ul`
     align-items: center;
     
     li {
-        margin-top: 4rem;
+        margin-top: 3.2rem;
         margin-left: 1.65rem;
         width: 100%;
     }
@@ -18,7 +18,7 @@ export const Container = styled.ul`
     }
 
     strong {
-        font-size: 0.90rem; 
+        font-size: 0.7rem; 
         word-wrap: break-word;
         white-space: -moz-pre-wrap; /* Mozilla */
         color: var(--text);

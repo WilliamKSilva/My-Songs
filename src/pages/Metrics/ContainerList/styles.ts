@@ -22,10 +22,10 @@ export const Container = styled.ul`
         border-bottom: 2px solid var(--border);
         width: 100%;        
         
-        margin-top: 2rem;                
+        margin-top: 1.5rem;                
 
         p {
-            font-size: 0.9rem;
+            font-size: 0.6rem;
             font-weight: 600;
             color: var(--text);
         }

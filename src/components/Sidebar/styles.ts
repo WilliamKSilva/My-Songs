@@ -27,14 +27,14 @@ export const Container = styled.section`
         flex-direction: column;
         width: 100%;
         align-items: center;
-        height: 70vh;        
+        height: 100vh;        
         border-bottom: 2px solid var(--border);
         
 
         h1 {
             color: var(--primary);            
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             margin-top: 4rem;
         }
     }
@@ -51,12 +51,12 @@ export const SidebarFooter = styled.footer`
 
 
     strong {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
         color: var(--text);
     }
 
     a {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
         font-weight: 800;
         color: var(--primary);
     }

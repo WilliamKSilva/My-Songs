@@ -30,7 +30,7 @@ export function useMetrics() {
                 console.log(err)
             }
         })()
-    }, [isLoading])     
+    }, [isLoading, access_token])     
 
     const fetchData = async () => {                                    
         const response = await axios.get(`https://api.spotify.com/v1/me/top/${currentParams}`,

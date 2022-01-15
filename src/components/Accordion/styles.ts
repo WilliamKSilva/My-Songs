@@ -42,7 +42,7 @@ export const Container = styled.div`
         border: 2px solid var(--border);
                 
         p {
-            font-size: 0.85rem;
+            font-size: 0.70rem;
             text-align: center;
             margin-top: 0.5rem;            
             color: var(--text);                        

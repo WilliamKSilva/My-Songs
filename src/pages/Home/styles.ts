@@ -28,18 +28,20 @@ export const Container = styled.main`
         
         h1 {
             font-weight: 600;
-            padding: 2rem;
+            padding: 0.3rem;
             color: var(--primary);
+            font-size: 1rem;
             text-align: center;
 
             @media(max-width: 480px){       
                 font-size: 1.1rem;
                 padding: 0rem;
             }
+            
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 0.9rem;
             margin-top: 2.5rem;
             color: var(--text);
             text-align: center;
@@ -51,6 +53,7 @@ export const Container = styled.main`
 
         span {
             color: var(--primary);
+            font-size: 0.9rem;
         }
     }
 
