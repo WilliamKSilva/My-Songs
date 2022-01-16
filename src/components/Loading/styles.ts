@@ -3,5 +3,5 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 20rem;
+    margin-top: 16rem;
 `;
