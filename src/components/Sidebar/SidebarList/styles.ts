@@ -4,12 +4,13 @@ export const Container = styled.ul`
     background-color: #222222;
     width: 100%;
     list-style-type: decimal;        
-    align-items: center;
+    align-items: center;    
+    
     
     li {
         margin-top: 3.2rem;
         margin-left: 1.65rem;
-        width: 100%;
+        width: 90%;        
     }
 
     li::marker {
@@ -22,5 +23,9 @@ export const Container = styled.ul`
         word-wrap: break-word;
         white-space: -moz-pre-wrap; /* Mozilla */
         color: var(--text);
+
+        @media (min-width: 1080px) {
+            
+        }
     }
 `;
